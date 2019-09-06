@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.library.mapper.ClassesMapper">
+    <select id="findAllClass" resultType="Classes">
+        select * from classes
+    </select>
+
+    <insert id="addClass" parameterType="Classes">
+        insert into classes(className) values(#{className})
+    </insert>
+
+    <delete id="deleteClass" parameterType="Integer">
+        delete from classes where id = #{id}
+    </delete>
+
+</mapper>
