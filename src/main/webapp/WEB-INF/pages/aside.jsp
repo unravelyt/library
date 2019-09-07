@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -10,7 +10,7 @@
             </div>
             <div class="pull-left info">
                 <br/>
-                <p property="principal.username">姓名</p>
+                <p property="principal.username">${user.name}</p>
             </div>
         </div>
 

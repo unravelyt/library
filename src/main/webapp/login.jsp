@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,13 +21,13 @@
 <body class="hold-transition login-page" style="background:url('./statics/img/d9.jpg');background-size:100% 100%">
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>图书馆</b></a>
+            <a href="#"><b>网上图书馆</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">登录图书管理系统</p>
 
-            <form action="../../index2.html" method="post">
+            <form action="${pageContext.request.contextPath}/user/login" method="post">
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="用户名" name="username">
                     <span class="glyphicon glyphicon glyphicon-user form-control-feedback"></span>

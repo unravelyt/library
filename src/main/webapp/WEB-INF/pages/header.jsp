@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 
 <header class="main-header">
     <!-- Logo -->
@@ -21,7 +21,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">姓名</span>
+                        <span class="hidden-xs">${user.name}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
