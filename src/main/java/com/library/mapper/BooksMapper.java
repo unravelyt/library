@@ -1,9 +1,11 @@
 package com.library.mapper;
 
 import com.library.domain.Books;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface BooksMapper {
 
     //按照条件模糊查询 书名和类别

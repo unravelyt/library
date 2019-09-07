@@ -2,7 +2,6 @@ package com.library;
 
 import com.library.domain.Admin;
 import com.library.domain.Reader;
-import com.library.domain.Record;
 import com.library.mapper.*;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -147,11 +146,6 @@ public class test1 {
         }
         List<Record> byUserId = mapper.findByUserId(2l);
         System.out.println(byUserId);*/
-
-        List<Record> all = mapper.lazyfindByid(1l);
-        for (Record record : all) {
-            System.out.println(record);
-        }
         /*List<Record> all = mapper.findByUserId(1l);
         for (Record record : all) {
             Long id = record.getId();

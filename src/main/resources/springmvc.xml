@@ -10,12 +10,21 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--开启注解扫描-->
+    <context:component-scan base-package="com.library.controller"/>
+
+    <!--视图解析器对象-->
+    <bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--过滤静态资源-->
+    <mvc:resources  location="/statics/" mapping="/statics/**"></mvc:resources>
 
 
-
-
-
-
+    <!--开启springmvc注解的支持-->
+    <mvc:annotation-driven></mvc:annotation-driven>
 
 
 </beans>

@@ -2,10 +2,13 @@ package com.library.mapper;
 
 import com.library.domain.Admin;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface AdminMapper {
+
     //查询所有管理员
     List<Admin> findAll();
 

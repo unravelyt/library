@@ -11,11 +11,8 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+
         </a>
 
         <div class="navbar-custom-menu">
@@ -23,17 +20,17 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="${pageContext.request.contextPath}/statics/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <span class="hidden-xs">姓名</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="${pageContext.request.contextPath}/statics/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
                                 姓名 - 身份
-                                <small>Member since Nov. 2012</small>
+                                <small>最后登录 11:20AM</small>
                             </p>
                         </li>
                         <!-- Menu Footer-->

@@ -2,6 +2,6 @@
          pageEncoding="UTF-8"%>
 <html>
 <body>
-<jsp:forward page="./WEB-INF/pages/main.jsp"></jsp:forward>
+<jsp:forward page="./WEB-INF/pages/booklist.jsp"></jsp:forward>
 </body>
 </html>

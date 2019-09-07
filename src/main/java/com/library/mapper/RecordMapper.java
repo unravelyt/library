@@ -1,9 +1,11 @@
 package com.library.mapper;
 
 import com.library.domain.Record;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface RecordMapper {
     //查询所有记录
     List<Record> findAll();
@@ -20,5 +22,4 @@ public interface RecordMapper {
     //修改记录
     void updateRecord(Record record);
 
-    List<Record> lazyfindByid(Long id);
 }

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -6,19 +6,19 @@
     <title>AdminLTE 2 | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="./statics/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./statics/bower_components/font-awesome/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="./statics/bower_components/Ionicons/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="./statics/dist/css/AdminLTE.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="./statics/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/statics/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/statics/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/statics/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/statics/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/statics/plugins/iCheck/square/blue.css">
 
 </head>
-<body class="hold-transition login-page" style="background:url('./statics/dist/img/d9.jpg');background-size:100% 100%">
+<body class="hold-transition login-page" style="background:url('./statics/img/d9.jpg');background-size:100% 100%">
     <div class="login-box">
         <div class="login-logo">
             <a href="#"><b>图书馆</b></a>
@@ -57,13 +57,10 @@
         <!-- /.login-box-body -->
     </div>
     <!-- /.login-box -->
+    <script src="${pageContext.request.contextPath}/statics/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/statics/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/statics/plugins/iCheck/icheck.min.js"></script>
 
-    <!-- jQuery 3 -->
-    <script src="./statics/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="./statics/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- iCheck -->
-    <script src="./statics/plugins/iCheck/icheck.min.js"></script>
     <script>
         $(function () {
             $('input').iCheck({

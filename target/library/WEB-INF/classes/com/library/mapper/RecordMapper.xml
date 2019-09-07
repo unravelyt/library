@@ -55,7 +55,4 @@
         update record set lend_date=#{lend_date},back_date=#{back_date} where id=#{id}
     </update>
 
-    <select id="lazyfindByid" resultType="Record" parameterType="Long">
-        select * from record where reader_id = #{id}
-    </select>
 </mapper>
