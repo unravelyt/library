@@ -10,12 +10,12 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--开启注解扫描-->
+    <!--将扫描该包内被@Repository @Service @Controller的注解类，然后注册到工厂中-->
     <context:component-scan base-package="com.library.controller"/>
 
     <!--视图解析器对象-->
     <bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="prefix" value="/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
@@ -23,7 +23,7 @@
     <mvc:resources  location="/statics/" mapping="/statics/**"></mvc:resources>
 
 
-    <!--开启springmvc注解的支持-->
+    <!--处理请求映射，决定是哪个controller的哪个方法来处理当前请求，异常处理。-->
     <mvc:annotation-driven></mvc:annotation-driven>
 
 

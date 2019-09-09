@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <html>
 <body>
-<jsp:forward page="./WEB-INF/pages/booklist.jsp"></jsp:forward>
+<jsp:forward page="login.jsp"></jsp:forward>
+
 </body>
 </html>

@@ -16,4 +16,11 @@ public class AdminServiceImpl implements AdminService {
     public Admin findByAdmin(String username, String password) {
         return mapper.findByAdmin(username, password);
     }
+
+    @Override
+    public void updateAdmin(Admin admin) {
+        mapper.updateAdmin(admin);
+    }
+
+
 }

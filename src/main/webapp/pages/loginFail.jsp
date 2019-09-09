@@ -23,10 +23,12 @@
         <section class="content">
             <div class="error-page">
                 <div class="error-content">
-                    <h3><i class="fa fa-warning text-yellow"></i> Oops! 用户不存在！</h3>
-                    <p>
+                    <h3><i class="fa fa-warning text-yellow"></i>
+                        Oops! 用户不存在！
+                    </h3>
+                    <h4 align="center">
                         再次检查帐号和密码, 你可以 <a href="${pageContext.request.contextPath}/login.jsp">重新登录</a>
-                    </p>
+                    </h4>
                 </div>
                 <!-- /.error-content -->
             </div>

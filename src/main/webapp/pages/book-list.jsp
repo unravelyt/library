@@ -92,66 +92,6 @@
                                 </tr>
                                 <tr>
                                     <td><input name="ids" type="checkbox"></td>
-                                    <td>2</td>
-                                    <td>Internet Explorer 4.0
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td class="text-center">开启</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">编辑</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input name="ids" type="checkbox"></td>
-                                    <td>3</td>
-                                    <td>Internet Explorer 4.0
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td class="text-center">开启</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">编辑</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input name="ids" type="checkbox"></td>
-                                    <td>4</td>
-                                    <td>Internet Explorer 4.0
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td class="text-center">开启</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">编辑</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input name="ids" type="checkbox"></td>
-                                    <td>5</td>
-                                    <td>Internet Explorer 4.0
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td class="text-center">开启</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">编辑</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input name="ids" type="checkbox"></td>
                                     <td>6</td>
                                     <td>Internet Explorer 4.0
                                     </td>
@@ -185,14 +125,10 @@
 
                             </table>
                             <!--数据列表/-->
-
                         </div>
                         <!-- 数据表格 /-->
-
-
                     </div>
                     <!-- /.box-body -->
-
                     <!-- .box-footer-->
                     <div class="box-footer">
                         <div class="pull-left">
@@ -227,11 +163,81 @@
                         </div>
                     </div>
                     <!-- /.box-footer-->
+                </div>
+        </section>  <%-- /.content --%>
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- 待处理游记 -->
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <i class="fa fa-book"></i>
+                        <h3 class="box-title">书库精选书籍</h3>
+                    </div>
+
+                    <div class="box-body">
+
+                        <!-- 数据表格 -->
+                        <div class="table-box">
+
+                            <!--数据列表-->
+                            <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th class="">书籍名称</th>
+                                    <th class="">简介</th>
+                                    <th class="">发布时间</th>
+                                    <th class="">状态</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>大王叫我来巡山</td>
+                                    <td>毕大爷带你游西安（附详细攻略）</td>
+                                    <td>2017-03-07 17:45</td>
+                                    <td>待审核</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="all-travellog-manage-edit.html"'>借阅</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>大王叫我来巡山</td>
+                                    <td>毕大爷带你游西安（附详细攻略）</td>
+                                    <td>2017-03-07 17:45</td>
+                                    <td>待审核</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="all-travellog-manage-edit.html"'>借阅</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>大王叫我来巡山</td>
+                                    <td>毕大爷带你游西安（附详细攻略）</td>
+                                    <td>2017-03-07 17:45</td>
+                                    <td>待审核</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="all-travellog-manage-edit.html"'>借阅</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--数据列表/-->
+
+                        </div>
+                        <!-- 数据表格 /-->
+
+                    </div>
+                    <!-- /.box-body -->
 
                 </div>
+                <!-- 待处理游记 /-->
+            </section>  <%-- /.content --%>
 
 
-        </section>  <%-- /.content --%>
+
+
     </div>  <%-- /.content-wrapper --%>
 </div>  <%-- /.wrapper --%>
 

@@ -7,6 +7,6 @@ public interface AdminService {
     //登录功能
     Admin findByAdmin(String username, String password);
 
-
+    void updateAdmin(Admin admin);
 
 }

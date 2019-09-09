@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <header class="main-header">
     <!-- Logo -->
     <a href="${pageContext.request.contextPath}/statics/index2.html" class="logo">
@@ -20,26 +20,34 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">${user.name}</span>
+                        <c:if test="${sessionScope.role == '管理员'}">
+                            <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        </c:if>
+                        <c:if test="${sessionScope.role == '用户'}">
+                            <img src="${pageContext.request.contextPath}/statics/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                        </c:if>
+                        <span class="hidden-xs">${sessionScope.user}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+                            <c:if test="${sessionScope.role == '管理员'}">
+                                <img src="${pageContext.request.contextPath}/statics/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            </c:if>
+                            <c:if test="${sessionScope.role == '用户'}">
+                                <img src="${pageContext.request.contextPath}/statics/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                            </c:if>
                             <p>
-                                姓名 - 身份
-                                <small>最后登录 11:20AM</small>
+                                ${sessionScope.user.} - ${sessionScope.role}
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="#" class="btn btn-default btn-flat">个人信息</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="${pageContext.request.contextPath}/login/logout" class="btn btn-default btn-flat">退出</a>
                             </div>
                         </li>
                     </ul>

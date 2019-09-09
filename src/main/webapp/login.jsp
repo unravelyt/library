@@ -27,7 +27,7 @@
         <div class="login-box-body">
             <p class="login-box-msg">登录图书管理系统</p>
 
-            <form action="${pageContext.request.contextPath}/user/login" method="post">
+            <form action="${pageContext.request.contextPath}/login/userlogin" method="post">
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="用户名" name="username">
                     <span class="glyphicon glyphicon glyphicon-user form-control-feedback"></span>
@@ -40,7 +40,7 @@
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
                             <label>
-                                <input type="checkbox" name="admin">    管理员登录
+                                <input type="checkbox" value="flag" name="adminflag">    管理员登录
                             </label>
                         </div>
                     </div>
