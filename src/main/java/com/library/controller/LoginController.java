@@ -28,7 +28,6 @@ public class LoginController {
                 model.addAttribute("role", "用户");
                 return "main";
             }else {
-                model.addAttribute("user", "未登录");
                 return "loginFail";
             }
         } else {
@@ -39,7 +38,6 @@ public class LoginController {
                 model.addAttribute("role", "管理员");
                 return "main";
             }else {
-                model.addAttribute("user", "未登录");
                 return "loginFail";
             }
         }

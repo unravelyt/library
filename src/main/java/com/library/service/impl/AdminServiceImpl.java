@@ -22,5 +22,10 @@ public class AdminServiceImpl implements AdminService {
         mapper.updateAdmin(admin);
     }
 
+    @Override
+    public Admin findById(Integer id) {
+        return mapper.findById(id);
+    }
+
 
 }

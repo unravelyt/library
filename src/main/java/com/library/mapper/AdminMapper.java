@@ -25,4 +25,6 @@ public interface AdminMapper {
     //删除管理员
     void deleteAdmin(Integer id);
 
+    Admin findById(Integer id);
+
 }

@@ -23,7 +23,7 @@
         <div class="login-logo">
             <a href="#"><b>网上图书馆</b></a>
         </div>
-        <!-- /.login-logo -->
+
         <div class="login-box-body">
             <p class="login-box-msg">登录图书管理系统</p>
 

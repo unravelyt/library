@@ -4,9 +4,9 @@
     <!-- Logo -->
     <a href="${pageContext.request.contextPath}/statics/index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>L</b>ib</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>L</b>ibray</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -26,8 +26,10 @@
                         <c:if test="${sessionScope.role == '用户'}">
                             <img src="${pageContext.request.contextPath}/statics/img/user3-128x128.jpg" class="user-image" alt="User Image">
                         </c:if>
-                        <span class="hidden-xs">${sessionScope.user}</span>
+                        <span class="hidden-xs">${sessionScope.user.name}</span>
+
                     </a>
+                    <c:if test="${sessionScope.user.name != null}">
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
@@ -38,19 +40,25 @@
                                 <img src="${pageContext.request.contextPath}/statics/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                             </c:if>
                             <p>
-                                ${sessionScope.user.} - ${sessionScope.role}
+                                ${sessionScope.user.name} - ${sessionScope.role}
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">个人信息</a>
+                                <c:if test="${sessionScope.role == '管理员'}">
+                                    <a href="${pageContext.request.contextPath}/admin/updateAdmin?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
+                                </c:if>
+                                <c:if test="${sessionScope.role == '用户'}">
+                                    <a href="${pageContext.request.contextPath}/reader/updateReader?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
+                                </c:if>
                             </div>
                             <div class="pull-right">
                                 <a href="${pageContext.request.contextPath}/login/logout" class="btn btn-default btn-flat">退出</a>
                             </div>
                         </li>
                     </ul>
+                    </c:if>
                 </li>
             </ul>
         </div>

@@ -15,16 +15,15 @@
     <!-- 导航侧栏 -->
     <jsp:include page="aside.jsp"></jsp:include>
 
-    <div class="content-wrapper"style="background:url('../statics/img/d9.jpg');background-size:100% 100%">
+    <div class="content-wrapper" style="background:url('../statics/img/d9.jpg');background-size:100% 100%">
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                首页
+                欢迎登录网上图书管理系统
                 <small>advanced tables</small>
             </h1>
         </section>
-
 
 
     </div>  <%-- /.content-wrapper --%>
@@ -41,6 +40,7 @@
 </div>  <%-- /.wrapper --%>
 
 <jsp:include page="footHREL.jsp"></jsp:include>
+
 
 </body>
 </html>

@@ -60,5 +60,8 @@ public List<XXXBean> getXXXBeanList(List<String> list);
         delete from admin where id = #{id}
     </delete>
 
+    <select id="findById" parameterType="Integer" resultType="Admin">
+        select * from admin where id = #{id}
+    </select>
 
 </mapper>
