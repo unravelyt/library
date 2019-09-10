@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <header class="main-header">
     <!-- Logo -->
-    <a href="${pageContext.request.contextPath}/statics/index2.html" class="logo">
+    <a href="${pageContext.request.contextPath}/statics/img/photo4.jpg" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>L</b>ib</span>
         <!-- logo for regular state and mobile devices -->
@@ -47,10 +47,10 @@
                         <li class="user-footer">
                             <div class="pull-left">
                                 <c:if test="${sessionScope.role == '管理员'}">
-                                    <a href="${pageContext.request.contextPath}/admin/updateAdmin?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
+                                    <a href="${pageContext.request.contextPath}/admin/findAdmin?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
                                 </c:if>
                                 <c:if test="${sessionScope.role == '用户'}">
-                                    <a href="${pageContext.request.contextPath}/reader/updateReader?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
+                                    <a href="${pageContext.request.contextPath}/admin/findReader?id=${sessionScope.user.id}" class="btn btn-default btn-flat">个人信息</a>
                                 </c:if>
                             </div>
                             <div class="pull-right">

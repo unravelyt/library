@@ -31,7 +31,7 @@
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-book"></i>
-                    <span>搜索书籍</span>
+                    <span>用户功能</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <li class="treeview ac">
                     <a href="#">
                         <i class="fa  fa-user"></i>
-                        <span>管理员权限</span>
+                        <span>管理员功能</span>
                         <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -57,8 +57,8 @@
                     <ul class="treeview-menu">
                         <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>管理书籍</a></li>
                         <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>借阅记录</a></li>
-                        <li><a href="../../index.html"><i class="fa fa-circle-o"></i>编辑读者</a></li>
-                        <li><a href="admin-list.jsp"><i class="fa fa-circle-o"></i>编辑管理员</a></li>
+                        <li><a href="${pageContext.request.contextPath}/admin/findAllReader"><i class="fa fa-circle-o"></i>编辑用户</a></li>
+                        <li><a href="${pageContext.request.contextPath}/admin/findAllAdmin"><i class="fa fa-circle-o"></i>编辑管理员</a></li>
                     </ul>
                 </li>
             </c:if>

@@ -18,7 +18,7 @@
 
         <section class="content-header">
             <h1>
-                编辑管理员
+                编辑用户
                 <small>advanced tables</small>
             </h1>
         </section>
@@ -28,10 +28,10 @@
             <div class="box box-success">
                 <div class="box-header with-border">
                     <i class="fa fa-book"></i>
-                    <h3 class="box-title">管理员信息</h3>
+                    <h3 class="box-title">用户信息</h3>
 
                     <a class="btn col-sm-offset-1">
-                        <i class="fa  fa-user-plus"></i><a href="${pageContext.request.contextPath}/pages/admin-save.jsp">添加用户</a>
+                        <i class="fa  fa-user-plus"></i><a href="${pageContext.request.contextPath}/pages/reader-save.jsp">添加用户</a>
                     </a>
 
                 </div>
@@ -50,27 +50,26 @@
                                 <th class="">姓名</th>
                                 <th class="">性别</th>
                                 <th class="">电话</th>
+                                <th class="">地址</th>
+                                <th class="">生日</th>
                                 <th class="text-center">操作</th>
                             </tr>
                             </thead>
 
                             <tbody>
-                            <c:forEach items="${Adminlist}" var="admin">
+                            <c:forEach items="${readerList}" var="reader">
                                 <tr>
 
-                                    <td>
-                                        ${admin.username}
-                                        <c:if test="${admin.id ==sessionScope.user.id}">
-                                            <span class="badge bg-green">Current</span>
-                                        </c:if>
-                                    </td>
-                                    <td>${admin.password}</td>
-                                    <td>${admin.name}</td>
-                                    <td>${admin.gender}</td>
-                                    <td>${admin.phone}</td>
+                                    <td>${reader.username}</td>
+                                    <td>${reader.password}</td>
+                                    <td>${reader.name}</td>
+                                    <td>${reader.gender}</td>
+                                    <td>${reader.phone}</td>
+                                    <td>${reader.address}</td>
+                                    <td>${reader.birthday}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-primary btn-xs" onclick='location.href="${pageContext.request.contextPath}/admin/findAdmin?id=${admin.id}"'>编辑</button>
-                                        <button type="button" class="btn btn-danger btn-xs" onclick='location.href="${pageContext.request.contextPath}/admin/deleteAdmin?id=${admin.id}"'>删除</button>
+                                        <button type="button" class="btn btn-primary btn-xs" onclick='location.href="${pageContext.request.contextPath}/admin/findReader?id=${reader.id}"'>编辑</button>
+                                        <button type="button" class="btn btn-danger btn-xs" onclick='location.href="${pageContext.request.contextPath}/admin/deleteReader?id=${reader.id}"'>删除</button>
                                     </td>
                                 </tr>
                             </c:forEach>

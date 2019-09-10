@@ -22,7 +22,6 @@
     <!--过滤静态资源-->
     <mvc:resources  location="/statics/" mapping="/statics/**"></mvc:resources>
 
-
     <!--处理请求映射，决定是哪个controller的哪个方法来处理当前请求，异常处理。-->
     <mvc:annotation-driven></mvc:annotation-driven>
 

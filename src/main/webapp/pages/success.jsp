@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%--<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 <html>
 <head>
 
@@ -15,32 +14,36 @@
     <!-- 导航侧栏 -->
     <jsp:include page="aside.jsp"></jsp:include>
 
-    <div class="content-wrapper" style="background:url('../statics/img/d9.jpg');background-size:100% 100%">
+    <div class="content-wrapper">
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                欢迎登录图书管理系统
+                首页
                 <small>advanced tables</small>
             </h1>
         </section>
+        <!-- Main content -->
+        <section class="content">
 
+            <div class="box box-solid box-success" align="center">
+                <div class="box-header">
+                    <h3>操 作 成 功 !</h3>
+                </div>
+                <div class="box-body">
+                    <br/>
+                    <h4><a href="${pageContext.request.contextPath}/pages/main.jsp">点 击 此 处 </a>返 回 首 页</h4>
+                    <br/>
+                    <br/>
+                </div>
 
+            </div>
+
+        </section>  <%-- /.content --%>
     </div>  <%-- /.content-wrapper --%>
-
-    <!-- 底部导航 -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2014-2019 <a href="http://www.itcast.cn">图书管理系统</a>.</strong> All rights reserved.
-    </footer>
-    <!-- 底部导航 /-->
-
 </div>  <%-- /.wrapper --%>
 
 <jsp:include page="footHREL.jsp"></jsp:include>
-
 
 </body>
 </html>

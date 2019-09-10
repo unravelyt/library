@@ -21,7 +21,7 @@
 <body class="hold-transition login-page" style="background:url('./statics/img/d9.jpg');background-size:100% 100%">
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>网上图书馆</b></a>
+            <a href="#"><b>图书馆</b></a>
         </div>
 
         <div class="login-box-body">
