@@ -39,7 +39,7 @@
     </select>
 
     <update id="updateReader" parameterType="Reader">
-        update reader set username=#{username},password=#{password},name=#{name},gender=#{gender},phone=#{phone},address=#{address},birthday=#{birthday}
+        update reader set username=#{username},password=#{password},name=#{name},gender=#{gender},phone=#{phone},address=#{address},birthday=#{birthday},borrow=#{borrow}
         where id=#{id}
     </update>
 

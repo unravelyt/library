@@ -3,7 +3,9 @@ package com.library.controller;
 import com.github.pagehelper.PageInfo;
 import com.library.domain.Books;
 import com.library.domain.Classes;
+import com.library.domain.Reader;
 import com.library.domain.Record;
+import com.library.service.AdminService;
 import com.library.service.BookService;
 import com.library.service.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,47 @@ public class ReaderController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private AdminService adminService;
+
+
+    @RequestMapping("/backBook")
+    public String backBook(Long id){
+        Record record = recordService.findByRecordId(id);
+        if (record.getBack_date() == null){
+            //还书的时候增加借阅记录次数
+            Long reader_id = record.getReader_id();
+            Reader reader = adminService.findByRid(reader_id);
+            Integer borrow = reader.getBorrow();
+            borrow = borrow+1;
+            reader.setBorrow(borrow);
+            adminService.updateReader(reader);
+            //馆存书籍书名加一
+            Long book_id = record.getBook_id();
+            Books book = bookService.findById(book_id);
+            Integer rest_number = book.getRest_number();
+            book.setRest_number(rest_number+1);
+            bookService.updateBook(book);
+            //借书记录加上归还时间
+            record.setBack_date(new Date());
+            recordService.update(record);
+            return "success";
+        }else {
+            return "bookback";
+        }
+
+    }
+
+    //续借
+    @RequestMapping("/renewBook")
+    public String renewBook(Long id){
+        //只需在借书记录上把借书时间改为当前即可
+        Record record = recordService.findByRecordId(id);
+        record.setLend_date(new Date());
+        recordService.update(record);
+        return "success";
+    }
 
     @RequestMapping("/back")
     public ModelAndView retrun(Long rid,int pageNum, int pageSize) {

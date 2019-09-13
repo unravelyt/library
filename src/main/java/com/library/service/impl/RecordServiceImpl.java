@@ -38,12 +38,13 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public void backBook(Record record) {
+    public void update(Record record) {
         recordMapper.updateRecord(record);
     }
 
+
     @Override
-    public void renew(Record record) {
-        recordMapper.updateRecord(record);
+    public Record findByRecordId(Long id) {
+        return recordMapper.findByRecordId(id);
     }
 }

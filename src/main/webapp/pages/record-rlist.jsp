@@ -74,8 +74,8 @@
                                         <td><span class="badge bg-green">还剩${record.due}天</span></td>
                                     </c:if>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-info btn-xs" onclick='location.href="${pageContext.request.contextPath}/record/renewBook?id=${record.id}"'>续期</button>
-                                        <button type="button" class="btn btn-info btn-xs" onclick='location.href="${pageContext.request.contextPath}/record/backBook?id=${record.id}"'>归还</button>
+                                        <button type="button" class="btn btn-info btn-xs" onclick='location.href="${pageContext.request.contextPath}/reader/renewBook?id=${record.id}"'>续期</button>
+                                        <button type="button" class="btn btn-primary btn-xs" onclick='location.href="${pageContext.request.contextPath}/reader/backBook?id=${record.id}"'>归还</button>
                                     </td>
                                 </tr>
                             </c:forEach>

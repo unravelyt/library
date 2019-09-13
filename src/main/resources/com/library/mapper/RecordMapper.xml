@@ -55,4 +55,8 @@
         update record set lend_date=#{lend_date},back_date=#{back_date} where id=#{id}
     </update>
 
+    <select id="findByRecordId" parameterType="Long" resultType="Record">
+        select * from record where id = #{id}
+    </select>
+
 </mapper>

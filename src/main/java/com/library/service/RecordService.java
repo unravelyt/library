@@ -14,8 +14,8 @@ public interface RecordService {
 
     List<Record> findByUserId(Long reader_id,int pageNum, int pageSize);
 
-    void backBook(Record record);
+    void update(Record record);
 
-    void renew(Record record);
+    Record findByRecordId(Long id);
 
 }

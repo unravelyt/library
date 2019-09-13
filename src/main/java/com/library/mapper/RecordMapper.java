@@ -22,4 +22,6 @@ public interface RecordMapper {
     //修改记录
     void updateRecord(Record record);
 
+    Record findByRecordId(Long id);
+
 }
