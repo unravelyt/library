@@ -57,7 +57,7 @@
                             <div class="form-group" >
                                 <label for="inputText4" class="col-sm-2 col-sm-offset-2 control-label">性别：</label>
                                 <div class="col-sm-5">
-                                    <select id="inputText4" class="form-control " name="gender">
+                                    <select id="inputText4" class="form-control" name="gender">
                                         <option value="男">男</option>
                                         <option value="女">女</option>
                                     </select>

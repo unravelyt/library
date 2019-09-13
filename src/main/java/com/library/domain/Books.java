@@ -26,4 +26,7 @@ public class Books implements Serializable {
     private Integer rest_number;
 
 
+    private Classes classes;
+
+
 }

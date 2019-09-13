@@ -19,4 +19,8 @@ public interface BooksMapper {
 
     //删除书籍
     void deleteBook(Long id);
+
+    List<Books> findAllBooks();
+
+    Books findById(Long id);
 }

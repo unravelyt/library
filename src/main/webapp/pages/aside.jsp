@@ -38,10 +38,10 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="../../index.html"><i class="fa fa-circle-o"></i>查询书籍</a>
+                        <a href="${pageContext.request.contextPath}/reader/findAll?pageNum=1&pageSize=5"><i class="fa fa-circle-o"></i>查询书籍</a>
                     </li>
                     <li>
-                        <a href="../../index2.html"><i class="fa fa-circle-o"></i>借阅记录</a>
+                        <a href="${pageContext.request.contextPath}/reader/back?rid=${sessionScope.user.id}&pageNum=1&pageSize=5"><i class="fa fa-circle-o"></i>借阅记录</a>
                     </li>
                 </ul>
             </li>
@@ -55,8 +55,8 @@
                     </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>管理书籍</a></li>
-                        <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>借阅记录</a></li>
+                        <li><a href="${pageContext.request.contextPath}/book/findAll?pageNum=1&pageSize=5"><i class="fa fa-circle-o"></i>管理书籍</a></li>
+                        <li><a href="${pageContext.request.contextPath}/record/findAllRecord?pageNum=1&pageSize=5"><i class="fa fa-circle-o"></i>借阅记录</a></li>
                         <li><a href="${pageContext.request.contextPath}/admin/findAllReader"><i class="fa fa-circle-o"></i>编辑用户</a></li>
                         <li><a href="${pageContext.request.contextPath}/admin/findAllAdmin"><i class="fa fa-circle-o"></i>编辑管理员</a></li>
                     </ul>

@@ -43,8 +43,8 @@
     </select>
 
     <insert id="addRecord" parameterType="Record">
-        insert into record(lend_date,back_date,reader_id,book_id)
-        values(#{lend_date},#{back_date},#{reader_id},#{book_id})
+        insert into record(lend_date,reader_id,book_id)
+        values(#{lend_date},#{reader_id},#{book_id})
     </insert>
 
     <delete id="deleteRecord" parameterType="Long">

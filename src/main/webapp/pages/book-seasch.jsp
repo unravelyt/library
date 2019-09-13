@@ -19,7 +19,7 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                书籍管理
+                搜索结果
             </h1>
         </section>
         <!-- 内容头部 /-->
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="${pageContext.request.contextPath}/book/findByCondition?pageNum=1&pageSize=5" method="post" class="form-horizontal">
+                        <form action="${pageContext.request.contextPath}/book/findByCondition" method="post" class="form-horizontal">
 
                             <!--.form-horizontal很关键，涉及到布局，不添加的话，label的文本不会‘右对齐’，且div.form-group之间没有间隔-->
 
@@ -67,15 +67,7 @@
                                     <input type="text" name="ISBN" class="form-control" id="inputText4" placeholder="ISBN">
                                 </div>
                             </span>
-                            <%--<div class="form-group" >
-                                <label for="inputText4" class="col-sm-1 control-label">类别：</label>
-                                <div class="col-sm-2">
-                                    <select id="inputText4" class="form-control" name="gender">
-                                        <option value="男">科学</option>
-                                        <option value="女">人文</option>
-                                    </select>
-                                </div>
-                            </div>--%>
+
 
                             <button type="submit" class="btn btn-info pull-right">搜索</button>
                         </form>

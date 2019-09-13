@@ -45,6 +45,7 @@
                         <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
                             <thead>
                             <tr>
+                                <th class="">序号</th>
                                 <th class="">帐号</th>
                                 <th class="">密码</th>
                                 <th class="">姓名</th>
@@ -57,9 +58,9 @@
                             </thead>
 
                             <tbody>
-                            <c:forEach items="${readerList}" var="reader">
+                            <c:forEach items="${readerList}" var="reader" varStatus="status">
                                 <tr>
-
+                                    <td>${status.count}</td>
                                     <td>${reader.username}</td>
                                     <td>${reader.password}</td>
                                     <td>${reader.name}</td>

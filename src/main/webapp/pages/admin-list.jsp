@@ -18,7 +18,7 @@
 
         <section class="content-header">
             <h1>
-                编辑管理员
+                管理员权限
                 <small>advanced tables</small>
             </h1>
         </section>
@@ -45,6 +45,7 @@
                         <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
                             <thead>
                             <tr>
+                                <th class="">序号</th>
                                 <th class="">帐号</th>
                                 <th class="">密码</th>
                                 <th class="">姓名</th>
@@ -55,9 +56,9 @@
                             </thead>
 
                             <tbody>
-                            <c:forEach items="${Adminlist}" var="admin">
+                            <c:forEach items="${Adminlist}" var="admin" varStatus="status">
                                 <tr>
-
+                                    <td>${status.count}</td>
                                     <td>
                                         ${admin.username}
                                         <c:if test="${admin.id ==sessionScope.user.id}">

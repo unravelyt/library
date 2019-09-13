@@ -99,7 +99,7 @@
                         <!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="button" onclick="location.href='${pageContext.request.contextPath}/admin/findAllReader'" class="btn btn-default col-sm-offset-4">取消</button>
+                            <button type="button" onclick="location.href='${pageContext.request.contextPath}/pages/main.jsp'" class="btn btn-default col-sm-offset-4">取消</button>
                             <button type="submit" class="btn btn-info col-sm-offset-2">提交</button>
                         </div>
                         <!-- /.box-footer -->

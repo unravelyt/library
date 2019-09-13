@@ -6,20 +6,42 @@
 <!--mapper接口配置文件-->
 <mapper namespace="com.library.mapper.BooksMapper">
 
+    <resultMap id="book_class" type="Books">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="author" column="author"/>
+        <result property="publish" column="publish"/>
+        <result property="ISBN" column="ISBN"/>
+        <result property="introduction" column="introduction"/>
+        <result property="language" column="language"/>
+        <result property="price" column="price"/>
+        <result property="pub_date" column="pub_date"/>
+        <result property="class_id" column="class_id"/>
+        <result property="rest_number" column="rest_number"/>
+        <association property="classes" column="class_id" javaType="Classes">
+            <result property="className" column="cname"/>
+        </association>
+    </resultMap>
+
+    <select id="findById" resultMap="book_class" parameterType="Long">
+        select b.*,c.className cname
+        from books b
+        left join classes c
+        on b.class_id = c.id
+        where b.id = #{id}
+    </select>
+
     <select id="findByCondition" parameterType="Books" resultType="Books">
         select * from books
         <where>
             <if test="name != null">
-                and name like #{name}
+                and name like CONCAT(CONCAT('%', #{name}), '%')
             </if>
             <if test="author != null">
-                and author like #{author}
+                and author like CONCAT(CONCAT('%', #{author}), '%')
             </if>
             <if test="ISBN != null">
                 and ISBN = #{ISBN}
-            </if>
-            <if test="class_id != null">
-                and class_id = #{class_id}
             </if>
         </where>
     </select>
@@ -38,5 +60,11 @@
     <delete id="deleteBook" parameterType="Long">
         delete from books where id = #{book_id}
     </delete>
+
+    <select id="findAllBooks" resultType="Books">
+        select * from books
+    </select>
+
+
 
 </mapper>

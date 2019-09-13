@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
-<%--<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
+
 <html>
 <head>
 
@@ -19,7 +19,7 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                书籍管理
+                书籍列表
             </h1>
         </section>
         <!-- 内容头部 /-->
@@ -37,15 +37,8 @@
 
                     <!-- 数据表格 -->
                     <div class="table-box">
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建" onclick='location.href="${pageContext.request.contextPath}/book/findClass"'><i class="fa fa-file-o"></i>新增书籍</button>
-                                </div>
-                            </div>
-                        </div>
-                        <form action="${pageContext.request.contextPath}/book/findByCondition?pageNum=1&pageSize=5" method="post" class="form-horizontal">
+
+                        <form action="${pageContext.request.contextPath}/reader/findByCondition?pageNum=1&pageSize=5" method="post" class="form-horizontal">
 
                             <!--.form-horizontal很关键，涉及到布局，不添加的话，label的文本不会‘右对齐’，且div.form-group之间没有间隔-->
 
@@ -67,15 +60,6 @@
                                     <input type="text" name="ISBN" class="form-control" id="inputText4" placeholder="ISBN">
                                 </div>
                             </span>
-                            <%--<div class="form-group" >
-                                <label for="inputText4" class="col-sm-1 control-label">类别：</label>
-                                <div class="col-sm-2">
-                                    <select id="inputText4" class="form-control" name="gender">
-                                        <option value="男">科学</option>
-                                        <option value="女">人文</option>
-                                    </select>
-                                </div>
-                            </div>--%>
 
                             <button type="submit" class="btn btn-info pull-right">搜索</button>
                         </form>
@@ -113,8 +97,8 @@
                                         <td class="text-center">${book.language}</td>
                                         <td class="text-center">${book.rest_number}</td>
                                         <td class="text-center">
-                                            <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${pageContext.request.contextPath}/book/findById?id=${book.id}"'>编辑</button>
-                                            <button type="button" class="btn btn-danger btn-xs" onclick='location.href="${pageContext.request.contextPath}/book/deleteBook?id=${book.id}"'>删除</button>
+                                            <button type="button" class="btn btn-primary btn-xs" onclick='location.href="${pageContext.request.contextPath}/reader/findById?id=${book.id}"'>详情</button>
+                                            <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${pageContext.request.contextPath}/reader/borrow?bid=${book.id}&rid=${sessionScope.user.id}"'>借阅</button>
                                         </td>
                                     </tr>
 
@@ -150,17 +134,17 @@
                     <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
-                                <a href="${pageContext.request.contextPath}/book/findAll?pageNum=1&pageSize=${bookList.pageSize}" aria-label="Previous">首页</a>
+                                <a href="${pageContext.request.contextPath}/reader/findAll?pageNum=1&pageSize=${bookList.pageSize}" aria-label="Previous">首页</a>
                             </li>
-                            <li><a href="${pageContext.request.contextPath}/book/findAll?pageNum=${bookList.pageNum-1}&pageSize=${bookList.pageSize}">上一页</a></li>
+                            <li><a href="${pageContext.request.contextPath}/reader/findAll?pageNum=${bookList.pageNum-1}&pageSize=${bookList.pageSize}">上一页</a></li>
 
                             <c:forEach begin="1" end="${bookList.pages}" var="num" >
-                                <li><a href="${pageContext.request.contextPath}/book/findAll?pageNum=${num}&pageSize=${bookList.pageSize}">${num}</a></li>
+                                <li><a href="${pageContext.request.contextPath}/reader/findAll?pageNum=${num}&pageSize=${bookList.pageSize}">${num}</a></li>
                             </c:forEach>
 
-                            <li><a href="${pageContext.request.contextPath}/book/findAll?pageNum=${bookList.pageNum+1}&pageSize=${bookList.pageSize}">下一页</a></li>
+                            <li><a href="${pageContext.request.contextPath}/reader/findAll?pageNum=${bookList.pageNum+1}&pageSize=${bookList.pageSize}">下一页</a></li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/book/findAll?pageNum=${bookList.pages}&pageSize=${bookList.pageSize}" aria-label="Next">尾页</a>
+                                <a href="${pageContext.request.contextPath}/reader/findAll?pageNum=${bookList.pages}&pageSize=${bookList.pageSize}" aria-label="Next">尾页</a>
                             </li>
                         </ul>
                     </div>
@@ -186,7 +170,7 @@
         var pageSize = $("#changePageSize").val();
 
         //项服务器发送请求，改变每页显示条数
-        location.href="${pageContext.request.contextPath}/book/findAll?pageNum=1&pageSize="+pageSize;
+        location.href="${pageContext.request.contextPath}/reader/findAll?pageNum=1&pageSize="+pageSize;
 
     }
 

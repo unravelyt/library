@@ -16,6 +16,7 @@ public class Record implements Serializable {
     private Date back_date;
     private Long reader_id;
     private Long book_id;
+    private Long due;
 
     //一对一查询
     private Reader reader;
